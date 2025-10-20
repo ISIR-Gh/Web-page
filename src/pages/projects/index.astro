@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const meta = {
+	title:'Our Projects | ISIR Ghana – Sustainable Innovation in Action',
+	description:'Explore ISIR Ghana’s flagship projects advancing health, education, agriculture, and climate resilience through research and innovation.',
+	image:'',
+	url:Astro.url,
+	
+}
+
+const projects = await getCollection('project');
+
+---
+
+<Layout {...meta}>
+    <main class="bg-white">
+      {/* Hero Section */}
+      <div class="bg-[url('https://images.unsplash.com/photo-1503264116251-35a269479413')] bg-cover bg-center  ">
+        <div class="bg-black/50">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="md:w-2/3">
+              <h1 class="text-6xl text-white font-bold mb-4">Projects</h1>
+              <hr class="w-1/6 text-sky-600 " />
+              <p class="my-8 text-2xl text-gray-100">
+                ISIR Ghana drives impact through innovation — from maternal health and STEAM education to agriculture and climate resilience. Explore our initiatives below.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Projects Grid */}
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid md:grid-cols-3 gap-6">
+          {projects.map((project) => (
+            <a href={`${import.meta.env.BASE_URL}/projects/${project.id}`} class="bg-gray-50  rounded-2xl border overflow-hidden hover:shadow-xl transition">
+                <div class="">
+                    <Image
+                      src={project.data.cover}
+                      alt={`${project.data.title} cover`}
+                      class="aspect-square "
+                    />
+                    <div class="p-6">
+                      <h3 class="text-xl font-semibold text-gray-800 mb-2">{project.data.title}</h3>
+                      <p class="text-gray-600 text-sm leading-relaxed">{project.data.summary}</p>
+                    </div>
+                  </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </main>
+</Layout>
