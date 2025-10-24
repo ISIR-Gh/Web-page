@@ -1,10 +1,10 @@
 ---
 layout: team
-name: ABDUL RASHID IDDI
+name: Abdul-Rashid, IDDI
 summary: Researcher & PhD Candidate, Leibniz University Hannover | 12+ Years
   Educator | Biomedical Scientist | NGO Project Coordinator | Entrepreneur &
   Institute CoFounder | Critical Thinker & Team Builder
-role: "Researcher "
+role: "Executive Director "
 profile: ../../assets/images/iddi.jpg
 ---
 
