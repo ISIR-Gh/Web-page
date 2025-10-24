@@ -1,9 +1,9 @@
 ---
 layout: team
-name: "Bashiru (Mikashini) Aminu "
+name: "Bashiru, AMINU "
 summary: Data Analyst | Monitoring, Evaluation, Research & Learning (MERL) |
   Crypto Enthusiast | Tech-savvy
-role: Program Manager
+role: Programs Manager
 profile: ../../assets/images/bashiru.jpg
 ---
 
