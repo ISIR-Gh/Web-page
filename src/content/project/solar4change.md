@@ -12,7 +12,7 @@ summary: " The Solar4Change initiative pilots renewable energy systems to
   operational efficiency and service delivery while contributing to climate
   mitigation and energy sustainability."
 target: 60000
-raised: 12349
+raised: 0
 cover: ../../assets/images/solar4change.png
 ---
 ### Overview:
