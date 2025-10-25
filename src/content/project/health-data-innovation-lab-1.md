@@ -14,7 +14,7 @@ summary: >-
 
   planning, and decision-making.
 target: 320000
-raised: 160000
+raised: 0
 cover: ../../assets/images/health_data.png
 ---
 ### Overview:
