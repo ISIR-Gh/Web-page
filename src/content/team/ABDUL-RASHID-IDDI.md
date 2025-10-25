@@ -1,6 +1,7 @@
 ---
 layout: team
 name: Abdul-Rashid, IDDI
+summary: Institute CoFounder | 12+ Years Educator | Biomedical Scientist | NGO Project Coordinator | Entrepreneur | Critical Thinker & Team Builder
 role: "Executive Director "
 profile: ../../assets/images/iddi.jpg
 ---
