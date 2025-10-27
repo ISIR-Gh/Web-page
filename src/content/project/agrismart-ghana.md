@@ -9,7 +9,7 @@ summary: AgriSmart Ghana promotes the adoption of climate-smart agricultural
   methods, and community demonstration farms, enhancing productivity and
   resilience against climate challenges.
 target: 300000
-raised: 129365
+raised: 0
 cover: ../../assets/images/chatgpt-image-oct-18-2025-10_23_56-pm.png
 ---
 ### Overview:

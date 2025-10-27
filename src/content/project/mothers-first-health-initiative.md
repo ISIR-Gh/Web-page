@@ -7,7 +7,7 @@ summary: Enhancing maternal and child health through community-based antenatal
   education, referral systems, and postpartum support. Strengthening local
   health networks to reduce maternal mortality and improve child outcomes.
 target: 120000
-raised: 1200
+raised: 2400
 cover: ../../assets/images/mother-first.png
 ---
 ## **Overview:**
