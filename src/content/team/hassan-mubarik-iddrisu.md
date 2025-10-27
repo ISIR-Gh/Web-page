@@ -1,9 +1,10 @@
 ---
 layout: team
 name: "Hassan Mubarik Iddrisu  "
+linkedin_url: https://linkedin.com/in/hassan-mubarik-iddrisu-6b792221a
 summary: Subject Officer (Mathematics) at WAEC Ghana | Measurement, Evaluation,
   Accountability & Learning | Driving Educational Impact through Data
-role: Monitoring & Evaluation Manager
+role: Monitoring, Evaluation, Accountability & Learning (MEAL)
 profile: ../../assets/images/mubarik.jpg
 ---
 

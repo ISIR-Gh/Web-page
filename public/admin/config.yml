@@ -60,8 +60,24 @@ collections:
     fields: 
       - { label: "Layout", name: "layout", widget: "hidden", default: "team" }
       - { label: "Full Name", name: "name", widget: "string" }
+      - { label: "LinkedIn URL", name: "linkedin_url", widget: "string" }
       - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Role", name: "role", widget: "select", options: [
+          'Executive Director',
+          'Deputy Executive Director',
+          'Program Manager',
+          'Monitoring, Evaluation, Accountability & Learning (MEAL)',
+          'Research Officers (Thematic Leads)',
+          'Finance & Administration Manager',
+          'Human Resources (HR) Officer',
+          'Communications & Public Affairs Manager',
+          'Grants Manager',
+          'IT & Web Officer',
+          'Executive Secretariat',
+          'Technical Experts and Consultants Pool',
+          'Volunteers',
+          'Interns'
+        ] }
       - { label: "Profie Picture", name: "profile", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
 

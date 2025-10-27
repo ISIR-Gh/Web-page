@@ -9,10 +9,7 @@ import ISIR_LOGO from '../assets/ISIR_logo.jpg'
       label: "Home",
       href: `${import.meta.env.BASE_URL}/`,
     },
-    {
-      label: "About",
-      href: `${import.meta.env.BASE_URL}/about-us`,
-    },
+    
     {
       label: "Projects",
       href: `${import.meta.env.BASE_URL}/projects`,
@@ -21,6 +18,26 @@ import ISIR_LOGO from '../assets/ISIR_logo.jpg'
       label: "Donate",
       href: `${import.meta.env.BASE_URL}/donate`,
     },
+    
+    {
+      label: "Research",
+      href: `${import.meta.env.BASE_URL}/research`,
+    },
+    {
+      label: "Reports",
+      href: `${import.meta.env.BASE_URL}/reports`,
+    },
+
+    {
+      label: "About us",
+      href: `${import.meta.env.BASE_URL}/about-us`,
+    },
+
+    {
+      label: "Team",
+      href: `${import.meta.env.BASE_URL}/team`,
+    },
+
     {
       label: "Contact",
       href: `${import.meta.env.BASE_URL}/contact-us`,
@@ -32,13 +49,14 @@ import ISIR_LOGO from '../assets/ISIR_logo.jpg'
 
 <header>
   <nav
-    class="bg-white w-full flex justify-between items-center px-4 py-2 border-b border-gray-300"
+    class="bg-white w-full flex justify-between md:justify-normal items-center px-4 py-2 border-b border-gray-300"
   >
-    <div class="flex items-center">
+    <div class="flex items-center md:w-1/4">
       <a href=`${import.meta.env.BASE_URL}/` class="flex items-center space-x-2">
         <Image src={ISIR_LOGO} alt='ISIR Logo' class='size-8'/>
       </a>
     </div>
+
     <div class="md:hidden">
       <button id="menu-btn" class="text-gray-800 focus:outline-none">
         <svg
@@ -56,12 +74,20 @@ import ISIR_LOGO from '../assets/ISIR_logo.jpg'
         </svg>
       </button>
     </div>
-    <ul class="hidden md:flex space-x-4 text-sky-600">
-      {navLinks.map((link) =>(
-        <li><a href={link.href} class={`hover:text-sky-700 ${link.href === path ? 'text-sky-800 underline decoration-sky-800' : ''}`}>{link.label}</a></li>
-      ))}
-  
-    </ul>
+
+    <div class='hidden md:flex justify-between items-center md:w-3/4'>
+        <ul class=" md:flex space-x-4 text-sky-600">
+        {navLinks.slice(0,5).map((link) =>(
+          <li><a href={link.href} class={`hover:text-sky-700 ${link.href === path ? 'text-sky-800 underline decoration-sky-800' : ''}`}>{link.label}</a></li>
+        ))}
+      </ul>
+
+      <ul class="hidden md:flex space-x-4 text-sky-600">
+        {navLinks.slice(5,8).map((link) =>(
+          <li><a href={link.href} class={`hover:text-sky-700 ${link.href === path ? 'text-sky-800 underline decoration-sky-800' : ''}`}>{link.label}</a></li>
+        ))}
+      </ul>
+    </div>
   </nav>
 
   <!-- ## Mobile Menu -->

@@ -1,0 +1,72 @@
+---
+import { Picture } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import Team from '../../assets/team2.jpg'
+import { UsersIcon } from "@heroicons/vue/24/outline";
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import LinkedInIcon from '../../assets/linkedin.svg'
+
+
+const meta = {
+	title:'Our Team',
+	description:'Meet the passionate professionals driving ISIR Ghana’s mission of bridging knowledge and action for sustainable development.',
+	image:'',
+	url:Astro.url,
+	
+}
+
+const team = await getCollection('team');
+
+---
+
+<Layout {...meta}>
+    <main class='bg-sky-50'>
+        <div class='relative'>
+		<Picture src={Team} priority alt='Hero image' class='aspect-video h-[70dvh] md:h-[80dvh] object-cover' />
+			<div class="absolute inset-0 bg-gradient-to-tr from-sky-600 "/>
+			<div class="absolute inset-0 bg-black/50" />
+			<div class='absolute inset-0  flex items-center'>
+				<div class="px-8 max-w-3xl">
+					<h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight">Our Team</h1>
+					<div class="mt-4 h-1 w-16 rounded bg-[#04B130]" />
+					<p class="text-xl lg:text-2xl my-8 text-white ">
+                    Meet the passionate professionals driving ISIR Ghana's mission of bridging knowledge and action for sustainable development.
+                    </p>
+					<div class="mt-10 flex flex-wrap gap-4 items-center">         
+					<a href=`${import.meta.env.BASE_URL}/contact-us` class='secondary-link flex items-center gap-2 w-fit'>
+                        <UsersIcon class="w-5 h-5" />
+                        Partner With Us
+                    </a>          
+				</div>
+				</div>
+			</div>
+		</div>
+
+        <section class='max-w-6xl mx-auto px-4 py-20'>
+             {/* Core Team */}
+            <div class="">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-16">
+                    <ul class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        {team.map((member) => (
+                        <li class="bg-white rounded py-5 px-2 sm:p-6 shadow-sm hover:shadow-md transition text-center group h-80">
+                            <a href={`${import.meta.env.BASE_URL}/team/${member.id}`} class='space-y-4'>
+                            <div class="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
+                            <Image  src={member.data.profile}  alt={member.data.name}  class="w-full h-full object-cover group-hover:scale-110 transition duration-300"
+                            />
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:underline group-hover:text-[#012C95]">{member.data.name}</h3>
+                            <p class="text-sky-600 text-sm font-semibold">{member.data.role}</p>
+                            <div class='flex items-center justify-center space-x-2 mt-6 md:mt-2'>
+							<a href={member.data.linkedin_url} target='_blank'><Image src={LinkedInIcon} alt='' class='aspect-square size-5 text-blue-600'/></a>
+						</div>
+                            </a>
+                        </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
