@@ -1,6 +1,7 @@
 ---
 layout: team
-name: "Bashiru, AMINU "
+name: Bashiru, AMINU
+linkedin_url: https://LinkedIn.com/in/mikashini-bash
 summary: Data Analyst | Monitoring, Evaluation, Research & Learning (MERL) |
   Crypto Enthusiast | Tech-savvy
 role: Programs Manager

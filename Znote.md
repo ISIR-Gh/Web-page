@@ -1,0 +1,4 @@
+# Comments
+1. ✅ It will be great to link to all our handles to their symbols (https://www.linkedin.com/company/institute-for-sustainable-and-innovative-research https://www.facebook.com/profile.php?id=100094868111371 https://www.instagram.com/isir.ghana https://www.youtube.com/@isirghana)
+2. Include in the About feature termed Our Team as part of the 5 already available or as a subsection under the About feature. I will share the various positions and the officers in charge with their respective pictures if they are available
+3. As part of Home, About,  Projects, Donate and contact features, can we add a  Research and Reports sections and under it we have Project reports, Annual report, Publications

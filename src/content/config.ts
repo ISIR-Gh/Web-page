@@ -44,6 +44,7 @@ const team = defineCollection({
 			name: z.string(),
 			summary: z.string(),
 			role: z.string(),
+			linkedin_url: z.string(),
 			profile: image(),
 		}),
 });
