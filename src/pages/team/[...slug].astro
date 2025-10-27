@@ -2,6 +2,10 @@
 import { getCollection, render } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
+import LinkedInIcon from '../../assets/linkedin.svg'
+import Wave from '../../assets/wave2mini.jpg'
+
 
 export async function getStaticPaths() {
 	const members = await getCollection("team");
@@ -24,14 +28,33 @@ const meta = {
 ---
 
 <Layout {...meta}>	
-	<div class='mt-20'>
+	<div class=''>
+		<div class='relative'>
+		<Picture src={Wave} priority alt='Hero image' class='aspect-video h-[70dvh] md:h-[80dvh] object-cover' />
+			<div class="absolute inset-0 bg-gradient-to-tl from-sky-600 "/>
+			<div class="absolute inset-0 bg-black/50" />
+			<div class='absolute inset-0 flex flex-col-reverse items-center md:flex-row  justify-center'>
+				<div class="px-8 max-w-3xl text-center space-y-3 my-3">
+					<h1 class="text-xl md:text-5xl font-bold text-white tracking-tight">{name}</h1>
+					<p class="text-base lg:text-2xl text-white ">{role}</p>
+					<div class=" flex flex-wrap gap-4 justify-center items-center">         
+						<a href=`${import.meta.env.BASE_URL}/contact-us` class=''>
+							<Image src={LinkedInIcon} alt='LinkedIn'class="w-5 h-5" />
+						</a>          
+					</div>
+				</div>
+				<div class='flex'>
+					<Picture src={profile} formats={['avif', 'webp']} alt={name} class='md:aspect-video md:size-96 rounded-full'/>
+				</div>
+			</div>
+		</div>
+
+
     <article class="prose max-w-3xl mx-auto">
-      <h1 class='text-5xl px-4'>{name}</h1>
-      <p class='text-xl px-4'>{role}</p>
-      <Picture src={profile} formats={['avif', 'webp']} alt={name} class='aspect-video'/>
-      <div class='px-4'>
-        <Content />
-      </div>
+		<!-- <Picture src={profile} formats={['avif', 'webp']} alt={name} class='aspect-video md:hidden'/> -->
+		<div class='px-4'>
+			<Content />
+		</div>
     </article>
 	</div>
 </Layout>
