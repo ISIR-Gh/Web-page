@@ -5,7 +5,7 @@ import { Picture } from 'astro:assets';
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import HeroImage from '../assets/hero-image.jpg'
-import { ArrowRightIcon } from "@heroicons/vue/24/outline";
+import { ArrowRightIcon, ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
 import ProjectCard from '../components/ProjectCard.astro';
 import EcoEmpower from '../assets/partners/EcoEmpower.png'
 import HERPolAfrica from '../assets/partners/HERPol-Africa.png'
@@ -162,7 +162,7 @@ const team = await getCollection('team');
 						<div class='flex items-center justify-center'>
 							<Image src={member.data.profile} alt='' class='aspect-square size-40 rounded-full'/>
 						</div>
-						<h6 class='font-bold text-2xl md:text-xl group-hover:underline group-hover:text-[#012C95]'>{member.data.name}</h6>
+						<h6 class='font-bold text-2xl md:text-xl group-hover:underline group-hover:text-[#012C95] underline'>{member.data.name} <ArrowTopRightOnSquareIcon class="size-5 inline-flex ml-1"/></h6>
 						<h6 class='font-medium text-base leading-5'>{member.data.role}</h6>
 						<div class='flex items-center justify-center space-x-2 mt-2'>
 							<a href={member.data.linkedin_url} target='_blank'><Image src={LinkedInIcon} alt='' class='aspect-square size-5'/></a>
