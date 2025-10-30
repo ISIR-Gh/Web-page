@@ -1,0 +1,82 @@
+---
+import { ArrowDownTrayIcon, ShieldCheckIcon } from "@heroicons/vue/24/outline";
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const meta = {
+	title:'Annual report',
+	description:'Bridging knowledge and action through evidence-based insights that drive sustainable development.',
+	url:Astro.url,
+}
+
+    const reports = await getCollection('report');
+
+---
+
+<Layout {...meta}>
+    <div class="bg-gradient-to-b from-sky-100 via-white to-green-100">
+      {/* Hero Section */}
+        <div class="relative">
+            <div class=" max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                Annual Reports
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-600 md:w-1/2 mb-10">
+                Explore ISIR Ghana's yearly reports to see how data-driven research and innovation create measurable impact across Ghana.
+                </p>
+                <a href={`${import.meta.env.BASE_URL}${reports[0].data.file}`} download class="primary-link flex items-center justify-center w-fit">
+                <ArrowDownTrayIcon class="w-5 h-5 mr-2" />
+                Download Latest Report
+                </a>
+            </div>
+            </div>
+        </div>
+
+        {/* Reports Grid Section */}
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {reports.map((report) => (
+                <div class="flex justify-between items-center px-4 py-2 rounded bg-sky-100">
+                <h3 class="text-sm font-bold text-gray-900">
+                    {report.data.title}
+                </h3>
+                <a href={`${import.meta.env.BASE_URL}${report.data.file}`} download class="">
+                    <ArrowDownTrayIcon class="w-5 h-5 mr-2" />
+                </a>
+                </div>
+            ))}
+            </div>
+        </div>
+
+        {/* Transparency Message */}
+        <div class="">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-6">
+                <ShieldCheckIcon class="w-8 h-8 text-emerald-600" />
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                Our Commitment to Transparency
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                ISIR Ghana publishes annual reports as part of our commitment to accountability and transparency. Each report details our program outcomes, partnerships, and financial stewardship.
+                </p>
+            </div>
+            </div>
+        </div>
+
+        {/* Call to Action Section */}
+        <div class="">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold  mb-6">
+                Your continued support helps us expand our reach and deepen our impact.
+            </h2>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href={`${import.meta.env.BASE_URL}/donate`} class="primary-link"> Donate Now </a>
+                <a href={`${import.meta.env.BASE_URL}/contact-us`} class="secondary-link text-black! border-black!"> Partner With </a>
+            </div>
+            </div>
+        </div>
+    </div>
+</Layout>

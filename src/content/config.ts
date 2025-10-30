@@ -49,6 +49,15 @@ const team = defineCollection({
 		}),
 });
 
+const report = defineCollection({
+	loader: file("src/data/reports.json"),
+	schema: () =>
+		z.object({
+			title: z.string(),
+			file: z.string(),
+		}),
+});
 
-export const collections = { blog, news,project,team };
+
+export const collections = { blog, news,project,team,report };
 

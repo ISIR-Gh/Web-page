@@ -66,5 +66,18 @@ collections:
       - { label: "Profie Picture", name: "profile", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
 
+  - name: "report" 
+    label: "Report" 
+    folder: "src/content/report"
+    create: true
+    fields: 
+      - { label: "Layout", name: "layout", widget: "hidden", default: "report" }
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "File"
+        name: "file"
+        widget: "file"
+        media_folder: "/public/reports"
+        public_folder: "/reports" 
+
 media_folder: "src/assets/images" # Location where files will be stored in the repo
 public_folder: "../../assets/images" # The src attribute for uploaded media
