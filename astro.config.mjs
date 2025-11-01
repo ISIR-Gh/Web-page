@@ -4,9 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 import vue from '@astrojs/vue';
 
 
-// https://astro.build/config
 export default defineConfig({
-  // site: 'https://amejro.github.io',
+  // site: '',
   base: '/Web-page',
   integrations: [vue()],
   prefetch: {

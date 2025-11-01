@@ -7,9 +7,11 @@ summary: A software engineer focused on designing and building scalable,
 role: Volunteer (Software Engineer)
 profile: ../../assets/images/amedzro.jpg
 ---
-I am a software engineer focused on designing and building scalable, reliable, and maintainable web systems. My journey in engineering began back in senior high school when I joined the IT club and was introduced to Python and HTML. The ability to bring logic to life in a browser not only sparked my curiosity but also shaped my long-term direction into system-level web engineering. 
-GitHub: [https://github.com/Amejro](<>)[](<>)
-Portfolio: [https://me-amejro.vercel.app/](<>)[](https://github.com/Amejro)[](https://me-amejro.vercel.app/)[](https://github.com/Amejro)
+I am a software engineer focused on designing and building scalable, reliable, and maintainable web systems. My journey in engineering began back in senior high school when I joined the IT club and was introduced to Python and HTML. The ability to bring logic to life in a browser not only sparked my curiosity but also shaped my long-term direction into system-level web engineering.  
+
+GitHub: https://github.com/Amejro
+
+Portfolio: https://me-amejro.vercel.app/
 
 ## What I Work On
 
